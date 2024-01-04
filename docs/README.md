@@ -18,6 +18,9 @@ https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K
 git clone https://hf-mirror.com/yuvalkirstain/PickScore_v1
 https://hf-mirror.com/yuvalkirstain/PickScore_v1
 
+GIT_LFS_SKIP_SMUDGE=1 git clone https://hf-mirror.com/yuvalkirstain/PickScore_v1
+git lfs fetch
+
 # Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
 git clone https://huggingface.co/yuvalkirstain/PickScore_v1
