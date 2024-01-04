@@ -12,6 +12,8 @@ git clone git@hf.co:yuvalkirstain/PickScore_v1
 GIT_LFS_SKIP_SMUDGE=1 git clone git@hf.co:yuvalkirstain/PickScore_v1
 git lfs fetch
 
+https://hf-mirror.com/yuvalkirstain/PickScore_v1
+
 # Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
 git clone https://huggingface.co/yuvalkirstain/PickScore_v1
