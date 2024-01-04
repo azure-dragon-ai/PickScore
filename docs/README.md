@@ -10,6 +10,7 @@ sudo yum install git-lfs
 git lfs install
 git clone git@hf.co:yuvalkirstain/PickScore_v1
 GIT_LFS_SKIP_SMUDGE=1 git clone git@hf.co:yuvalkirstain/PickScore_v1
+git lfs fetch
 
 # Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
