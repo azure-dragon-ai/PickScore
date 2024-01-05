@@ -24,6 +24,26 @@ wget "https://hf-mirror.com/yuvalkirstain/PickScore_v1/resolve/main/model.safete
 wget "https://hf-mirror.com/yuvalkirstain/PickScore_v1/resolve/main/pytorch_model.bin?download=true"
 
 GIT_LFS_SKIP_SMUDGE=1 git clone https://hf-mirror.com/laion/CLIP-ViT-H-14-laion2B-s32B-b79K
+wget "https://hf-mirror.com/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/open_clip_pytorch_model.bin?download=true"
+wget "https://hf-mirror.com/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/pytorch_model.bin?download=true"
+
+pip install virtualenv -i https://pypi.tuna.tsinghua.edu.cn/simple/
+virtualenv clip
+# virtualenv --python /usr/local/webserver/python3.6/bin/python3.6 clip
+# virtualenv --system-site-packages clip
+source clip/bin/activate
+deactivate
+
+mkdir ~/.pip
+vim ~/.pip/pip.conf
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=mirrors.aliyun.com
+
+pip install torch torchvision torchaudio -i https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install -e .
 
 # Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
