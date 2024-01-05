@@ -45,6 +45,8 @@ pip install torch torchvision torchaudio -i https://pypi.tuna.tsinghua.edu.cn/si
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 pip install -e .
 
+pip install pydantic==1.10.13 -i https://pypi.douban.com/simple
+
 # Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
 git clone https://huggingface.co/yuvalkirstain/PickScore_v1
