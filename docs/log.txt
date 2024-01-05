@@ -1,0 +1,93 @@
+python test.py
+`text_config_dict` is provided which will be used to initialize `CLIPTextConfig`. The value `text_config["id2label"]` will be overriden.
+/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/pydantic/_internal/_config.py:321: UserWarning: Valid config keys have changed in V2:
+* 'allow_population_by_field_name' has been renamed to 'populate_by_name'
+* 'validate_all' has been renamed to 'validate_default'
+  warnings.warn(message, UserWarning)
+/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/pydantic/_internal/_fields.py:149: UserWarning: Field "model_persistence_threshold" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/pydantic/_internal/_config.py:321: UserWarning: Valid config keys have changed in V2:
+* 'validate_all' has been renamed to 'validate_default'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1126, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/models/clip/modeling_clip.py", line 27, in <module>
+    from ...modeling_utils import PreTrainedModel
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/modeling_utils.py", line 37, in <module>
+    from .deepspeed import deepspeed_config, is_deepspeed_zero3_enabled
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/deepspeed.py", line 38, in <module>
+    from accelerate.utils.deepspeed import HfDeepSpeedConfig as DeepSpeedConfig
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/accelerate/__init__.py", line 3, in <module>
+    from .accelerator import Accelerator
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/accelerate/accelerator.py", line 31, in <module>
+    from .checkpointing import load_accelerator_state, load_custom_state, save_accelerator_state, save_custom_state
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/accelerate/checkpointing.py", line 24, in <module>
+    from .utils import (
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/accelerate/utils/__init__.py", line 105, in <module>
+    from .launch import (
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/accelerate/utils/launch.py", line 28, in <module>
+    from ..utils.other import merge_dicts
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/accelerate/utils/other.py", line 28, in <module>
+    from deepspeed import DeepSpeedEngine
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/__init__.py", line 15, in <module>
+    from . import module_inject
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/module_inject/__init__.py", line 3, in <module>
+    from .replace_module import replace_transformer_layer, revert_transformer_layer, ReplaceWithTensorSlicing, GroupQuantizer, generic_injection
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/module_inject/replace_module.py", line 803, in <module>
+    from ..pipe import PipelineModule
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/pipe/__init__.py", line 3, in <module>
+    from ..runtime.pipe import PipelineModule, LayerSpec, TiedLayerSpec
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/runtime/pipe/__init__.py", line 3, in <module>
+    from .module import PipelineModule, LayerSpec, TiedLayerSpec
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/runtime/pipe/module.py", line 16, in <module>
+    from ..activation_checkpointing import checkpointing
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/runtime/activation_checkpointing/checkpointing.py", line 25, in <module>
+    from deepspeed.runtime.config import DeepSpeedConfig
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/runtime/config.py", line 30, in <module>
+    from ..monitor.config import get_monitor_config
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/monitor/config.py", line 70, in <module>
+    class DeepSpeedMonitorConfig(DeepSpeedConfigModel):
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/deepspeed/monitor/config.py", line 82, in DeepSpeedMonitorConfig
+    def check_enabled(cls, values):
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/pydantic/deprecated/class_validators.py", line 231, in root_validator
+    return root_validator()(*__args)  # type: ignore
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/pydantic/deprecated/class_validators.py", line 237, in root_validator
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: If you use `@root_validator` with pre=False (the default) you MUST specify `skip_on_failure=True`. Note that `@root_validator` is deprecated and should be replaced with `@model_validator`.
+
+For further information visit https://errors.pydantic.dev/2.5/u/root-validator-pre-skip
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/home/zhangchunsheng/git/PickScore/test.py", line 12, in <module>
+    model = AutoModel.from_pretrained(model_pretrained_name_or_path).eval().to(device)
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 470, in from_pretrained
+    model_class = _get_model_class(config, cls._model_mapping)
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 360, in _get_model_class
+    supported_models = model_mapping[type(config)]
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 602, in __getitem__
+    return self._load_attr_from_module(model_type, model_name)
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 616, in _load_attr_from_module
+    return getattribute_from_module(self._modules[module_name], attr)
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 561, in getattribute_from_module
+    if hasattr(module, attr):
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1116, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/data/home/zhangchunsheng/clip/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1128, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import transformers.models.clip.modeling_clip because of the following error (look up to see its traceback):
+If you use `@root_validator` with pre=False (the default) you MUST specify `skip_on_failure=True`. Note that `@root_validator` is deprecated and should be replaced with `@model_validator`.
+
+For further information visit https://errors.pydantic.dev/2.5/u/root-validator-pre-skip
