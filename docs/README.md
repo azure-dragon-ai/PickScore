@@ -50,6 +50,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 [install]
 trusted-host=mirrors.aliyun.com
 
+pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cu118
 pip install torch==2.1.1 torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
