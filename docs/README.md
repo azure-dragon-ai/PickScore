@@ -65,6 +65,12 @@ set DS_BUILD_SPARSE_ATTN=O
 
 set DS_BUILD_AIO=0 & set DS_BUILD_SPARSE_ATTN=O & pip install -r requirements.txt
 
+set DS_BUILD_AIO=0 & set DS_BUILD_SPARSE_ATTN=O & DS_BUILD_OPS=0 & pip install -r requirements.txt
+DS_BUILD_CUTLASS_OPS=0 DS_BUILD_RAGGED_DEVICE_OPS=0 DS_BUILD_EVOFORMER_ATTN=0
+pip install "dist\deepspeed-0.12.7+d058d4b3-py3-none-any.whl"
+
+set DS_BUILD_AIO=0 & set DS_BUILD_SPARSE_ATTN=O & set DS_BUILD_CUTLASS_OPS=0 & set DS_BUILD_RAGGED_DEVICE_OPS=0 & set DS_BUILD_EVOFORMER_ATTN=0 & pip install -r requirements.txt
+
 pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
 
 pip install pydantic==1.10.13 -i https://pypi.douban.com/simple

@@ -91,3 +91,65 @@ RuntimeError: Failed to import transformers.models.clip.modeling_clip because of
 If you use `@root_validator` with pre=False (the default) you MUST specify `skip_on_failure=True`. Note that `@root_validator` is deprecated and should be replaced with `@model_validator`.
 
 For further information visit https://errors.pydantic.dev/2.5/u/root-validator-pre-skip
+
+ Preparing metadata (setup.py) ... error
+  error: subprocess-exited-with-error
+
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [45 lines of output]
+      C:\Work\AI-Service\Score\PickScore\score\lib\site-packages\pydantic\_internal\_config.py:321: UserWarning: Valid config keys have changed in V2:
+      * 'allow_population_by_field_name' has been renamed to 'populate_by_name'
+      * 'validate_all' has been renamed to 'validate_default'
+        warnings.warn(message, UserWarning)
+      C:\Work\AI-Service\Score\PickScore\score\lib\site-packages\pydantic\_internal\_fields.py:149: UserWarning: Field "model_persistence_threshold" has conflict with protected namespace "model_".
+
+      You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+        warnings.warn(
+      C:\Work\AI-Service\Score\PickScore\score\lib\site-packages\pydantic\_internal\_config.py:321: UserWarning: Valid config keys have changed in V2:
+      * 'validate_all' has been renamed to 'validate_default'
+        warnings.warn(message, UserWarning)
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\setup.py", line 33, in <module>
+          from op_builder import get_default_compute_capabilities, OpBuilder
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\op_builder\__init__.py", line 16, in <module>
+          import deepspeed.ops.op_builder  # noqa: F401
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\__init__.py", line 15, in <module>
+          from . import module_inject
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\module_inject\__init__.py", line 3, in <module>
+          from .replace_module import replace_transformer_layer, revert_transformer_layer, ReplaceWithTensorSlicing, GroupQuantizer, generic_injection
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\module_inject\replace_module.py", line 803, in <module>
+          from ..pipe import PipelineModule
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\pipe\__init__.py", line 3, in <module>
+          from ..runtime.pipe import PipelineModule, LayerSpec, TiedLayerSpec
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\runtime\pipe\__init__.py", line 3, in <module>
+          from .module import PipelineModule, LayerSpec, TiedLayerSpec
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\runtime\pipe\module.py", line 16, in <module>
+          from ..activation_checkpointing import checkpointing
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\runtime\activation_checkpointing\checkpointing.py", line 25, in <module>
+          from deepspeed.runtime.config import DeepSpeedConfig
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\runtime\config.py", line 30, in <module>
+          from ..monitor.config import get_monitor_config
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\monitor\config.py", line 70, in <module>
+          class DeepSpeedMonitorConfig(DeepSpeedConfigModel):
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-ml19rvok\deepspeed_ccad94cbdda54e5ca9641ea778b39c55\deepspeed\monitor\config.py", line 82, in DeepSpeedMonitorConfig
+          def check_enabled(cls, values):
+        File "C:\Work\AI-Service\Score\PickScore\score\lib\site-packages\pydantic\deprecated\class_validators.py", line 231, in root_validator
+          return root_validator()(*__args)  # type: ignore
+        File "C:\Work\AI-Service\Score\PickScore\score\lib\site-packages\pydantic\deprecated\class_validators.py", line 237, in root_validator
+          raise PydanticUserError(
+      pydantic.errors.PydanticUserError: If you use `@root_validator` with pre=False (the default) you MUST specify `skip_on_failure=True`. Note that `@root_validator` is deprecated and should be replaced with `@model_validator`.
+
+      For further information visit https://errors.pydantic.dev/2.5/u/root-validator-pre-skip
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
