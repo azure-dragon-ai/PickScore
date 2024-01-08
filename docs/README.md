@@ -73,6 +73,8 @@ set DS_BUILD_AIO=0 & set DS_BUILD_SPARSE_ATTN=O & set DS_BUILD_CUTLASS_OPS=0 & s
 
 pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
 
+python test.py
+
 pip install pydantic==1.10.13 -i https://pypi.douban.com/simple
 
 # Make sure you have git-lfs installed (https://git-lfs.com)
