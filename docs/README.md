@@ -22,6 +22,7 @@ GIT_LFS_SKIP_SMUDGE=1 git clone https://hf-mirror.com/yuvalkirstain/PickScore_v1
 # git lfs fetch
 wget "https://hf-mirror.com/yuvalkirstain/PickScore_v1/resolve/main/model.safetensors?download=true"
 wget "https://hf-mirror.com/yuvalkirstain/PickScore_v1/resolve/main/pytorch_model.bin?download=true"
+https://hf-mirror.com/yuvalkirstain/PickScore_v1/resolve/main/tf_model.h5
 
 wget https://testing.ai-space.net/PickScore/yuvalkirstain/PickScore_v1/model.safetensors
 wget https://testing.ai-space.net/PickScore/yuvalkirstain/PickScore_v1/pytorch_model.bin
@@ -40,6 +41,7 @@ virtualenv score
 # virtualenv --python /usr/local/webserver/python3.6/bin/python3.6 clip
 # virtualenv --system-site-packages clip
 source clip/bin/activate
+# c:\Work\AI-Service\Score\PickScore>
 score\Scripts\activate
 deactivate
 
